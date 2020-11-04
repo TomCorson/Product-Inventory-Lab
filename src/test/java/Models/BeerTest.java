@@ -29,4 +29,17 @@ public class BeerTest {
         int actual = testBeer.getIdNum();
         Assertions.assertEquals(expected,actual);
     }
+
+    @Test
+    public void constructorTest(){
+        int expectedIdNum = 2222;
+        String expectedType = "Porter";
+        int expectedQuantity = 12;
+
+        Beer testBeer = new Beer(expectedIdNum,expectedType,expectedQuantity);
+
+        Assertions.assertEquals(expectedIdNum,testBeer.getIdNum());
+        Assertions.assertEquals(expectedType, testBeer.getType());
+        Assertions.assertEquals(expectedQuantity,testBeer.getQuantity());
+    }
 }

@@ -1,14 +1,21 @@
 package Models;
 
 public class Beer {
-
+    private int idNum;
     private String type;
     private int quantity;
-    private int idNum;
+
 
     public Beer(){
 
     }
+
+    public Beer(int IdNum, String type, int quantity) {
+        this.idNum = IdNum;
+        this.type = type;
+        this.quantity = quantity;
+    }
+
 
     public String getType() {
         return this.type;

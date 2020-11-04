@@ -5,6 +5,17 @@ public class Produce {
     private String type;
     private int quantity;
 
+
+
+    public Produce() {
+
+    }
+    public Produce(int IdNum, String type, int quantity) {
+        this.idNum = IdNum;
+        this.type = type;
+        this.quantity = quantity;
+    }
+
     public void setType(String type){
         this.type = type;
     }

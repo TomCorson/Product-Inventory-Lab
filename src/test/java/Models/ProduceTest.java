@@ -28,4 +28,16 @@ public class ProduceTest {
         int actual = testProduce.getQuantity();
         Assertions.assertEquals(expected,actual);
     }
+    @Test
+    public void constructorTest(){
+        int expectedIdNum = 2819;
+        String expectedType = "Lettuce";
+        int expectedQuantity = 100;
+
+        Produce testProduce = new Produce(expectedIdNum,expectedType,expectedQuantity);
+
+                Assertions.assertEquals(expectedIdNum,testProduce.getIdNum());
+                Assertions.assertEquals(expectedType, testProduce.getType());
+                Assertions.assertEquals(expectedQuantity,testProduce.getQuantity());
+    }
 }
