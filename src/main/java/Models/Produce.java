@@ -1,6 +1,7 @@
 package Models;
 
 public class Produce {
+
     private int idNum;
     private String type;
     private int quantity;
@@ -37,5 +38,9 @@ public class Produce {
 
     public int getQuantity() {
         return this.quantity;
+    }
+
+    public String toString(){
+        return "Id: " + this.getIdNum() + "Type: " + this.type + "Quantity: "+this.quantity;
     }
 }
