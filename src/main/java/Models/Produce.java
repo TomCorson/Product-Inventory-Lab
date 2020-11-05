@@ -41,6 +41,6 @@ public class Produce {
     }
 
     public String toString(){
-        return "Id: " + this.getIdNum() + "Type: " + this.type + "Quantity: "+this.quantity;
+        return this.type.toUpperCase() +"-\nId: " + this.getIdNum() + "\nType: " + this.type + "\nQuantity: "+this.quantity;
     }
 }

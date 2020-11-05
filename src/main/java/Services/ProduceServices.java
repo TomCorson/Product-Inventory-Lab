@@ -26,13 +26,14 @@ public class ProduceServices {
                 return obj;
             }
         }
+        System.out.println("Id not found");
             return null;
     }
     public String findAll(){
 
         return inventory.toString();
         }
-public boolean delete(int idNum){
+    public boolean delete(int idNum){
     for(Produce obj: inventory) {
         if (obj.getIdNum() == idNum) {
             inventory.remove(obj);
@@ -41,6 +42,23 @@ public boolean delete(int idNum){
     }
     return false;
 }
+    public String listProducts(){
+        StringBuilder list = new StringBuilder();
+                for(Produce obj: inventory){
+                   list.append(obj.toString() + "\n\n");
+                }
+                return list.toString();
+    }
+    public String stockReportList(){
+        StringBuilder stockList = new StringBuilder();
+        for(Produce obj: inventory){
+            stockList.append(obj.getType());
+            stockList.append("-");
+            stockList.append(obj.getQuantity());
+            stockList.append("\n");
+        }
+        return stockList.toString();
+    }
 }
 
 

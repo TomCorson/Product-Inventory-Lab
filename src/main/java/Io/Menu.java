@@ -5,13 +5,14 @@ import Models.Produce;
 import Services.ProduceServices;
 public class Menu {
     Console startConsole = new Console();
+
     public Menu(){
 
     }
 
     public static void printer(){
         System.out.println("1:Add item 2:List existing products 3:Update products \n" +
-                "4:Delete products 5:Product report 6:Exit menu\n");
+                "4:Delete products 5:Current product report 6:Exit menu\n");
     }
 
 
@@ -28,16 +29,16 @@ public class Menu {
                     startConsole.addOption();
                     break;
                 case 2:
-                    //read existing products
+                    startConsole.list();
                     break;
                 case 3:
-                    //updated products
+                    startConsole.update();
                     break;
                 case 4:
-                    //delete products
+                    startConsole.delete();
                     break;
                 case 5:
-                    //get reports about products
+                    startConsole.currentStockReport();
                 case 6:
                     exit = true;
                     break;

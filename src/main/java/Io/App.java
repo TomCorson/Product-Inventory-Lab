@@ -11,7 +11,6 @@ public class App {
     }
 
     public void init(){
-        Menu.printer();
         Menu startMenu = new Menu();
         startMenu.menuSwitcher();
     }
