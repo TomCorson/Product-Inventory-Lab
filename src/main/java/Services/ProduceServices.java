@@ -5,18 +5,16 @@ import Models.Produce;
 import java.util.ArrayList;
 
 public class ProduceServices {
-    private static int productNum =1;
+    private static int count = 1;
     private ArrayList<Produce> inventory = new ArrayList<Produce>();
     public ProduceServices(){
 
     }
 
     public Produce create(int idNum, String type, int quantity) {
-
+        count++;
         Produce createdProduce = new Produce(idNum,type,quantity);
-
         inventory.add(createdProduce);
-
         return createdProduce;
     }
 
@@ -59,6 +57,7 @@ public class ProduceServices {
         }
         return stockList.toString();
     }
+
 }
 
 
