@@ -1,5 +1,6 @@
 package Io;
 
+import java.io.IOException;
 import java.util.ArrayList;
 import java.util.Scanner;
 import Models.Produce;
@@ -7,6 +8,10 @@ import Services.ProduceServices;
 public class Console {
      ProduceServices produceServicesObj = new ProduceServices();
      ArrayList<Produce> report = new ArrayList<Produce>();
+
+    public Console() {
+    }
+
     public static void printWelcome(){
         System.out.println("" +
                 "**************************************************" +

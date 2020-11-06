@@ -29,26 +29,5 @@ public class CSVUtils {
         sb.append("\n");
 
         w.append(sb.toString());
-
-
-        String csvFile = "/Users/tom/Dev/try.csv";
-        FileWriter writer = new FileWriter(csvFile); //(1)
-
-        CSVUtils.writeLine(writer, new ArrayList<String>(Arrays.asList(String.valueOf(count))));  // (2)
-
-        for (Produce obj : inventory) {
-            List<String> list = new ArrayList<>(); // (3)
-            list.add(String.valueOf(obj.getIdNum()));
-            list.add(obj.getType());
-            list.add(String.valueOf(obj.getQuantity()));
-
-
-            CSVUtils.writeLine(writer, list);  // (4)
-        }
-
-// (5)
-        writer.flush();
-        writer.close();
-
     }
-}
+    }

@@ -2,6 +2,8 @@ package Io;
 
 import Services.ProduceServices;
 
+import java.io.IOException;
+
 public class App {
 
 
@@ -11,7 +13,9 @@ public class App {
     }
 
     public void init(){
+
         Menu startMenu = new Menu();
         startMenu.menuSwitcher();
+
     }
 }
