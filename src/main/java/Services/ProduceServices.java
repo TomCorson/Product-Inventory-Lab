@@ -3,6 +3,8 @@ package Services;
 import Models.Produce;
 import Utils.CSVUtils;
 
+import java.io.BufferedReader;
+import java.io.FileReader;
 import java.io.FileWriter;
 import java.io.IOException;
 import java.util.ArrayList;
@@ -71,21 +73,25 @@ public class ProduceServices {
     public void writeData() throws IOException {
 
         String csvFile = "/Users/tom/Dev/try.csv";
-        FileWriter writer = new FileWriter(csvFile); //(1)
+        FileWriter writer = new FileWriter(csvFile); 
 
         CSVUtils.writeLine(writer, new ArrayList<String>(Arrays.asList(String.valueOf(count))));  // (2)
 
         for (Produce obj : inventory) {
-            List<String> list = new ArrayList<>();
+            ArrayList<String> list = new ArrayList<>();
             list.add(String.valueOf(obj.getType()));
             CSVUtils.writeLine(writer, list);
         }
 
-      // (4)
         writer.flush();
         writer.close();
 
     }
+
+
+
+
+
 }
 
 

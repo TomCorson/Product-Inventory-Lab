@@ -1,5 +1,5 @@
 package Io;
-
+import Io.Console;
 import java.io.IOException;
 import java.util.Scanner;
 import Models.Produce;
@@ -41,13 +41,15 @@ public class Menu {
                 case 5:
                     startConsole.currentStockReport();
                 case 6:
-                    ProduceServices testWrite = new ProduceServices();
+                        ProduceServices testWrite = new ProduceServices();
                     try {
                         testWrite.writeData();
                     } catch (IOException e) {
                         e.printStackTrace();
                     }
                     break;
+
+
                 case 7:
                     exit = true;
                     break;
